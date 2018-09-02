@@ -9,9 +9,9 @@ def call(String versionedJobName, String desiredBuildPrefix = '1.0', String buil
         env['BUILDING_QA_CANDIDATE'] = 'true'
         buildPrefix = desiredBuildPrefix
         if (buildsAllTime && buildsAllTime != '') {
-            versionNumber = VersionNumber([versionNumberString: '.${BUILDS_ALL_TIME}.0', versionPrefix: buildPrefix, buildsAllTime: buildsAllTime])
+            versionNumber = VersionNumber([versionNumberString: '.${BUILDS_ALL_TIME}-SNAPSHOT', versionPrefix: buildPrefix, buildsAllTime: buildsAllTime])
         } else {
-            versionNumber = VersionNumber([versionNumberString: '.${BUILDS_ALL_TIME}.0', versionPrefix: buildPrefix])
+            versionNumber = VersionNumber([versionNumberString: '.${BUILDS_ALL_TIME}-SNAPSHOT', versionPrefix: buildPrefix])
         }
     } else {
         env['BUILDING_QA_CANDIDATE'] = 'false'
