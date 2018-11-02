@@ -16,7 +16,6 @@ def call(String versionedJobName, String desiredBuildPrefix = '1.0', String buil
         versionNumber = '99.99.99'
     }
 
-    currentBuild.displayName = versionNumber
     return versionNumber
 }
 
